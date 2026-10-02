@@ -284,6 +284,30 @@ if (contactForm) {
   });
 }
 
+// ============================
+// SCROLL REVEAL
+// ============================
+const revealTargets = document.querySelectorAll(
+  '#nosotros, #galeria, #expansion, #productos, #contacto, .producto, .sucursal'
+);
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+revealTargets.forEach((el, i) => {
+  el.classList.add('reveal');
+  if (el.classList.contains('producto') || el.classList.contains('sucursal')) {
+    el.style.transitionDelay = (i % 4 * 0.1) + 's';
+  }
+  revealObserver.observe(el);
+});
+
 });
 window.addEventListener('scroll', function() {
   const header = document.querySelector('header');
