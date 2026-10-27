@@ -119,6 +119,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const galeriaTrack = document.querySelector(".galeria-track");
 const galeriaSlides = document.querySelectorAll(".galeria-slide");
+// El último .galeria-slide puede ser un clon puramente visual (data-clone) de la
+// primera foto, para que siempre se vea un pedacito de imagen tras la última real.
+// No debe contar en el ciclo de índices de next/prev/autoplay.
+const galeriaRealCount = document.querySelectorAll(".galeria-slide:not([data-clone])").length;
 const galeriaPrev = document.querySelector(".galeria-btn.prev");
 const galeriaNext = document.querySelector(".galeria-btn.next");
 
@@ -135,19 +139,19 @@ if (galeriaTrack && galeriaSlides.length > 0) {
   }
 
   galeriaNext.addEventListener("click", () => {
-    index = (index + 1) % galeriaSlides.length;
+    index = (index + 1) % galeriaRealCount;
     update();
   });
 
   galeriaPrev.addEventListener("click", () => {
-    index = (index - 1 + galeriaSlides.length) % galeriaSlides.length;
+    index = (index - 1 + galeriaRealCount) % galeriaRealCount;
     update();
   });
 
   function startAutoplay() {
     clearInterval(autoplay);
     autoplay = setInterval(() => {
-      index = (index + 1) % galeriaSlides.length;
+      index = (index + 1) % galeriaRealCount;
       update();
     }, 3000);
   }
@@ -288,7 +292,7 @@ if (contactForm) {
 // SCROLL REVEAL
 // ============================
 const revealTargets = document.querySelectorAll(
-  '#nosotros, #galeria, #expansion, #productos, #contacto, .producto, .sucursal'
+  '#nosotros, #galeria, #fotos, #expansion, #productos, #contacto, #mapa, .producto, .sucursal'
 );
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -317,4 +321,15 @@ window.addEventListener('scroll', function() {
     header.classList.remove('scrolled');
   }
 });
+
+// Mide la altura real del header (fixed) y la expone como variable CSS,
+// para que el hero se separe lo justo sin importar zoom, wrap del menú o breakpoint.
+function updateHeaderHeightVar() {
+  const header = document.querySelector('header');
+  if (!header) return;
+  document.documentElement.style.setProperty('--header-height', header.getBoundingClientRect().height + 'px');
+}
+updateHeaderHeightVar();
+window.addEventListener('load', updateHeaderHeightVar);
+window.addEventListener('resize', updateHeaderHeightVar);
 
