@@ -7,7 +7,6 @@ const ASSETS = [
   '/7cajas-web/images/logo.png',
   '/7cajas-web/images/logo2.png',
   '/7cajas-web/images/logo-seda.png',
-  '/7cajas-web/images/logo-lot.png',
   '/7cajas-web/images/slide1.jpg',
   '/7cajas-web/images/slide2.jpg',
   '/7cajas-web/images/slide3.jpg',

@@ -1,6 +1,6 @@
 # 7 Cajas — Sitio institucional
 
-Landing page de **7 Cajas Distribuidora**, mayorista de aceite de girasol alto oleico (marcas SEDA y LOT) para el sector gastronómico e industrial.
+Landing page de **7 Cajas Distribuidora**, mayorista de aceite de girasol alto oleico (marca SEDA) para el sector gastronómico e industrial.
 
 **Sitio en vivo:** https://federicodanielabram.github.io/7cajas-web/
 
