@@ -2,7 +2,7 @@
 
 Landing page de **7 Cajas Distribuidora**, mayorista de aceite de girasol alto oleico (marca SEDA) para el sector gastronómico e industrial.
 
-**Sitio en vivo:** https://federicodanielabram.github.io/7cajas-web/
+**Sitio en vivo:** https://7cajasdistribuidora.com
 
 ## Qué es
 
@@ -10,7 +10,7 @@ La cara pública de la empresa: presenta el producto, la marca y los datos de co
 
 ## Stack
 
-HTML, CSS y JavaScript sin framework — a propósito, para que cargue rápido y no dependa de un build. PWA instalable (`manifest.json` + `sw.js`), desplegado en GitHub Pages.
+HTML, CSS y JavaScript sin framework — a propósito, para que cargue rápido y no dependa de un build. PWA instalable (`manifest.json` + `sw.js`), desplegado en Vercel con dominio propio.
 
 ## Features
 
