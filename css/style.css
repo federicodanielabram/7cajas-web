@@ -339,7 +339,7 @@ header.scrolled .social-icons img {
 }
 
 .hero-content {
-  max-width: 900px;
+  max-width: 1200px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -371,7 +371,7 @@ header.scrolled .social-icons img {
 }
 
 .hero-content h2 {
-  font-size: 2.8rem;
+  font-size: 4rem;
   margin-bottom: 0;
 }
 
@@ -864,6 +864,10 @@ header.scrolled .social-icons img {
   cursor: default;
   pointer-events: none;
   transition: none;
+}
+
+.modal-gallery img:only-child {
+  width: 85%;
 }
 
 .modal-cerrar {

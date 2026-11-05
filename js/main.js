@@ -74,6 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <ul class="modal-lista">
           <li><strong>Tipo:</strong> <span class="modal-tipo"></span></li>
           <li><strong>Presentación:</strong> <span class="modal-presentacion"></span></li>
+          <li class="modal-detalle-item"><strong>Características:</strong> <span class="modal-detalle"></span></li>
+          <li><strong>Certificaciones:</strong> <span>FSCC 22000 · Kosher · Halal · Orgánico</span></li>
         </ul>
       </div>
     `;
@@ -106,6 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     modal.querySelector(".modal-tipo").textContent = producto.dataset.tipo || "";
     modal.querySelector(".modal-presentacion").textContent = producto.dataset.presentacion || "";
+
+    const detalle = producto.dataset.detalle || "";
+    modal.querySelector(".modal-detalle").textContent = detalle;
+    modal.querySelector(".modal-detalle-item").style.display = detalle ? "" : "none";
 
     modal.classList.add("activo");
   }
