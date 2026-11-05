@@ -855,7 +855,8 @@ header.scrolled .social-icons img {
 }
 
 .modal-contenido {
-  background: var(--color-fondo);
+  background: var(--color-secundario);
+  color: var(--color-fondo);
   padding: 2rem;
   border-radius: 15px;
   max-width: 900px;
@@ -875,6 +876,9 @@ header.scrolled .social-icons img {
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 1rem;
+  background: var(--color-fondo);
+  padding: 1rem;
+  border-radius: 15px;
 }
 
 .modal-gallery img {
@@ -899,7 +903,7 @@ header.scrolled .social-icons img {
   border: none;
   font-size: 2rem;
   cursor: pointer;
-  color: var(--color-texto);
+  color: var(--color-fondo);
 }
 
 @keyframes aparecer {
@@ -1146,7 +1150,7 @@ footer .footer-logo {
 
 .modal-lista li {
   padding: 0.4rem 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
 }
