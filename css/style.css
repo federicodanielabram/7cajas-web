@@ -876,9 +876,6 @@ header.scrolled .social-icons img {
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 1rem;
-  background: var(--color-fondo);
-  padding: 1rem;
-  border-radius: 15px;
 }
 
 .modal-gallery img {
