@@ -840,6 +840,7 @@ header.scrolled .social-icons img {
   border-radius: 15px;
   max-width: 900px;
   width: 90%;
+  min-height: 745px;
   text-align: center;
   position: relative;
   animation: aparecer 0.3s ease;
@@ -1531,6 +1532,7 @@ footer .footer-logo {
   /* ---- MODAL ---- */
   .modal-contenido {
     width: 95%;
+    min-height: auto;
     padding: 1.2rem;
     border-radius: 10px;
   }

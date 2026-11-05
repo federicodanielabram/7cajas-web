@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const detalle = producto.dataset.detalle || "";
     modal.querySelector(".modal-detalle").textContent = detalle;
-    modal.querySelector(".modal-detalle-item").style.display = detalle ? "" : "none";
+    modal.querySelector(".modal-detalle-item").style.visibility = detalle ? "visible" : "hidden";
 
     modal.classList.add("activo");
   }
