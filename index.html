@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7 Cajas | Aceite Alto Oleico</title>
+  <title>7 Cajas | Aceite de Alto Rendimiento</title>
   <meta name="description" content="Distribuidora de aceite alto oleico de alta calidad para la industria alimentaria y gastronómica.">
   <meta name="theme-color" content="#264653">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="7 Cajas">
   <link rel="manifest" href="manifest.json">
-  <link rel="apple-touch-icon" href="images/logo.png">
-  <script>var v = new Date().getTime();</script>
-  <script>document.write('<link rel="stylesheet" href="css/style.css?v=' + v + '">');</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png">
+  <link rel="apple-touch-icon" href="images/favicon-180.png">
+  <link rel="stylesheet" href="css/style.css?v=ea6600e4">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -33,7 +34,7 @@
       <div class="hero-content-wrapper">
         <div class="hero-content">
           <div class="hero-title-cta">
-            <h2>ACEITE DE GIRASOL<br>ACEITE DE ALTO RENDIMIENTO</h2>
+            <h2>ACEITE DE ALTO RENDIMIENTO</h2>
             <p>Mayor rendimiento, frituras perfectas, costos optimizados.</p>
             <a href="#contacto" class="btn">Solicitar cotización</a>
           </div>
@@ -56,28 +57,41 @@
         <img src="images/logo2.png" alt="Logo secundario" class="logo-secundario">
       </div>
 
-      <div class="social-icons">
-        <a href="https://www.instagram.com/7cajasdistribuidora/?hl=es" target="_blank">
-          <img src="images/instagram.png" alt="Instagram">
-        </a>
-        <a href="https://www.facebook.com/7cajasdistribuidora/?locale=es_LA" target="_blank">
-          <img src="images/facebook.png" alt="Facebook">
-        </a>
-        <a href="https://api.whatsapp.com/message/HHEGYZUKEHJLJ1?autoload=1&app_absent=0&utm_source=ig" target="_blank">
-          <img src="images/whatsapp.png" alt="WhatsApp">
-        </a>
-      </div>
+      <!-- Botón hamburguesa: solo visible en mobile -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenuPanel">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-      <!-- Fila inferior: Menú de navegación -->
-      <div class="nav-social-container">
-        <nav class="nav-menu">
-          <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
+      <!-- En desktop este div es invisible estructuralmente (display:contents);
+           en mobile se convierte en el panel desplegable del menú hamburguesa -->
+      <div class="mobile-menu-panel" id="mobileMenuPanel">
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/7cajasdistribuidora/?hl=es" target="_blank">
+            <img src="images/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.facebook.com/7cajasdistribuidora/?locale=es_LA" target="_blank">
+            <img src="images/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://api.whatsapp.com/message/HHEGYZUKEHJLJ1?autoload=1&app_absent=0&utm_source=ig" target="_blank">
+            <img src="images/whatsapp.png" alt="WhatsApp">
+          </a>
+        </div>
+
+        <!-- Fila inferior: Menú de navegación -->
+        <div class="nav-social-container">
+          <nav class="nav-menu">
+            <ul>
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#productos">Productos</a></li>
+              <li><a href="#nosotros">Nosotros</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+
       </div>
 
     </div>
@@ -120,7 +134,7 @@
     <div class="productos-container">
 
         <article class="producto producto--medio"
-                 data-img="images/producto-medio-detalle.png"
+                 data-img="images/producto-medio-detalle.jpg"
                  data-tipo="Medio Oleico"
                  data-presentacion="Dos bags de 10lts">
 
@@ -133,7 +147,7 @@
         </article>
 
         <article class="producto producto--alto"
-                 data-img="images/producto-alto-detalle.png"
+                 data-img="images/producto-alto-detalle.jpg"
                  data-tipo="Alto Oleico"
                  data-presentacion="Dos bags de 10lts"
                  data-detalle="Hasta 85% de ácidos grasos Omega-9 · Alta resistencia a la oxidación, ideal para frituras · Sin ácidos grasos trans · Sabor y aroma neutros">
@@ -146,7 +160,7 @@
         </article>
 
         <article class="producto producto--oliva"
-                 data-img="images/producto-oliva-detalle.png"
+                 data-img="images/producto-oliva-detalle.jpg"
                  data-tipo="Aceite de oliva"
                  data-presentacion="Botellas de 500ml, 12 botellas por caja"
                  data-detalle="Primera prensa en frío · Acidez menor a 0,5% · Sabor suave que no invade · Apto para altas temperaturas">
@@ -176,7 +190,7 @@
 
         <div class="galeria-slide">
           <div class="galeria-slide-inner">
-            <img src="images/distribucion1.png" alt="">
+            <img src="images/distribucion1.jpg" alt="">
           </div>
         </div>
 
@@ -201,7 +215,7 @@
         <!-- Clon visual de la primera foto: evita el hueco en blanco al llegar a la última -->
         <div class="galeria-slide" data-clone="true" aria-hidden="true">
           <div class="galeria-slide-inner">
-            <img src="images/distribucion1.png" alt="" aria-hidden="true">
+            <img src="images/distribucion1.jpg" alt="" aria-hidden="true">
           </div>
         </div>
 
@@ -280,9 +294,9 @@
 
       <!-- SUCURSALES -->
       <div class="sucursales-lista">
-        <a class="sucursal" data-city="laplata" href="https://api.whatsapp.com/send?phone=542216837979" target="_blank">
+        <a class="sucursal" data-city="laplata" href="https://api.whatsapp.com/send?phone=5492214385786" target="_blank">
           <span class="sucursal-nombre">7 Cajas Distribuidora La Plata</span>
-          <span class="sucursal-tel">+54 221 683 7979</span>
+          <span class="sucursal-tel">+54 9 221 438 5786</span>
           <img src="images/whatsapp.png" alt="WhatsApp" class="sucursal-wa-icon">
         </a>
         <a class="sucursal" data-city="rosario" href="https://api.whatsapp.com/send?phone=543415008037" target="_blank">
@@ -353,7 +367,7 @@
         <img src="images/telefono.png" alt="Teléfono" class="icono-contacto">
       </p>
 
-      <p style="margin: 8px 0 30px;">(221) 683-7979</p>
+      <p style="margin: 8px 0 30px;">+54 9 221 438-5786</p>
 
       <p style="display:flex; align-items:center; gap:10px; font-weight:bold;">
         <img src="images/whatsapp2.png" alt="WhatsApp" class="icono-contacto">
@@ -423,7 +437,7 @@
 
   </div> <!-- End wrapper -->
 
-<script>document.write('<script src="js/main.js?v=' + v + '"><\/script>');</script>
+<script src="js/main.js?v=cd87e4e9"></script>
 <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js');

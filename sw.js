@@ -12,7 +12,7 @@ const ASSETS = [
   '/7cajas-web/images/slide3.jpg',
   '/7cajas-web/images/slide4.jpg',
   '/7cajas-web/images/mapa-puntos.png',
-  '/7cajas-web/images/distribucion1.png',
+  '/7cajas-web/images/distribucion1.jpg',
   '/7cajas-web/images/distribucion2.jpg',
   '/7cajas-web/images/distribucion3.jpg',
   '/7cajas-web/images/distribucion4.jpg'

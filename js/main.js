@@ -51,6 +51,30 @@ document.addEventListener("DOMContentLoaded", function () {
   showSlide(index);
   startAutoplay();
 
+  // ============================
+  // MENÚ HAMBURGUESA (MOBILE)
+  // ============================
+
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenuPanel = document.getElementById('mobileMenuPanel');
+
+  if (menuToggle && mobileMenuPanel) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileMenuPanel.classList.toggle('open');
+      menuToggle.classList.toggle('active', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Cerrar el panel al tocar un link de navegación
+    mobileMenuPanel.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuPanel.classList.remove('open');
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
 
 
   // ============================
